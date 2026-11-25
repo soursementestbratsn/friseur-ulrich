@@ -13,9 +13,9 @@ services:
       - key: NODE_VERSION
         value: 20
       - key: ADMIN_USER
-        sync: false
+        value: lorcyt
       - key: ADMIN_PASS
-        sync: false
+        value: bagdu9-qeqnyq-kazbiX
       - key: SESSION_SECRET
         generateValue: true
       # Mail (optional). Fill in the Render dashboard if you want emails.

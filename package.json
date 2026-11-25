@@ -12,6 +12,7 @@
     "node": ">=18"
   },
   "dependencies": {
-    "nodemailer": "^6.9.14"
+    "nodemailer": "^6.9.14",
+    "playwright": "^1.65.1"
   }
 }
