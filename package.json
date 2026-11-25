@@ -1,0 +1,17 @@
+{
+  "name": "friseur-ulrich",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Friseur Ulrich - salon website with online booking, reviews and admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

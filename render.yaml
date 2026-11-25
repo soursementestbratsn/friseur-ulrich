@@ -1,0 +1,31 @@
+# Render Blueprint (free plan).
+# Push the project to GitHub, then in Render: New -> Blueprint -> pick the repo.
+services:
+  - type: web
+    name: friseur-ulrich
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      # Mail (optional). Fill in the Render dashboard if you want emails.
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_TO
+        sync: false

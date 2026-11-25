@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Friseur Ulrich · Парикмахерская в Хайденхайме</title>
+  <meta name="description" content="Парикмахерский салон Friseur Ulrich в Хайденхайме: стрижка, окрашивание, уход L'Oréal и Kérastase. Работаем по записи.">
+  <meta name="theme-color" content="#1B1A17">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============ ПРЕЛОАДЕР ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <span class="preloader__mark">U</span>
+      <span class="preloader__line"><i></i></span>
+    </div>
+  </div>
+
+  <!-- ============ ПРОГРЕСС ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ ШАПКА ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand" aria-label="Friseur Ulrich — на главную">
+        <span class="brand__mark">U</span>
+        <span class="brand__text">
+          <span class="brand__name">Friseur Ulrich</span>
+          <span class="brand__sub">Heidenheim</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#ueber" class="nav__link">О салоне</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#preise" class="nav__link">Прайс</a>
+        <a href="#team" class="nav__link">Команда</a>
+        <a href="#auszeichnungen" class="nav__link">Награды</a>
+        <a href="#reviews" class="nav__link">Отзывы</a>
+        <a href="#kontakt" class="nav__link">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+49732143947" class="btn btn--ghost btn--sm header__phone">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1Z"/></svg>
+          07321 43947
+        </a>
+        <a href="#termin" class="btn btn--primary btn--sm">Записаться</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow reveal" data-reveal>Парикмахерский салон · с 2015 года</p>
+          <h1 class="hero__title">
+            <span class="reveal" data-reveal>Волосы,</span>
+            <span class="reveal" data-reveal><em>в которые</em> хочется</span>
+            <span class="reveal" data-reveal>смотреться в зеркало.</span>
+          </h1>
+          <p class="hero__lead reveal" data-reveal>
+            Сегодня — не просто подстричь, а создать целое впечатление. Коллективная работа с L'Oréal и Kérastase: подбираем форму, цвет и уход, которые работают именно для вас.
+          </p>
+          <div class="hero__cta reveal" data-reveal>
+            <a href="#termin" class="btn btn--accent">
+              Записаться онлайн
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#preise" class="btn btn--text">Смотреть прайс</a>
+          </div>
+
+          <ul class="hero__facts reveal" data-reveal>
+            <li><strong>Пн</strong><span>выходной</span></li>
+            <li><strong>Вт–Пт</strong><span>8:00 – 18:00</span></li>
+            <li><strong>Сб</strong><span>по сезону</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame reveal" data-reveal>
+            <div class="hero__photo">
+              <img src="assets/img/hero-salon.jpg" alt="Салон Friseur Ulrich в Хайденхайме" width="673" height="435" fetchpriority="high">
+            </div>
+            <div class="hero__badge">
+              <span class="hero__badge-num"><span data-count="11">0</span>+</span>
+              <span class="hero__badge-label">лет<br>на рынке</span>
+            </div>
+          </div>
+          <div class="hero__strip reveal" data-reveal>
+            <img src="assets/img/team-wide.jpg" alt="Команда салона" width="622" height="294" loading="lazy">
+            <span class="hero__strip-tag">Команда Ulrich</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#ueber" class="scroll-hint" aria-label="Прокрутить вниз">
+        <span class="scroll-hint__line"></span>
+        <span>прокрутите</span>
+      </a>
+    </section>
+
+    <!-- ============ МАРКИ-ПАРТНЁРЫ ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>L'Oréal</span><span class="dot">✦</span>
+        <span>Kérastase</span><span class="dot">✦</span>
+        <span>Hair Discovery</span><span class="dot">✦</span>
+        <span>ночные и международные награды</span><span class="dot">✦</span>
+        <span>L'Oréal</span><span class="dot">✦</span>
+        <span>Kérastase</span><span class="dot">✦</span>
+        <span>Hair Discovery</span><span class="dot">✦</span>
+        <span>ночные и международные награды</span><span class="dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ============ О САЛОНЕ ============ -->
+    <section class="section about" id="ueber">
+      <div class="container about__grid">
+        <div class="about__media">
+          <figure class="about__img about__img--a reveal" data-reveal>
+            <img src="assets/img/team-03.jpg" alt="Мастер за работой" loading="lazy">
+          </figure>
+          <figure class="about__img about__img--b reveal" data-reveal>
+            <img src="assets/img/hero-detail.jpg" alt="Детали интерьера салона" loading="lazy">
+          </figure>
+          <div class="about__stat reveal" data-reveal>
+            <span class="about__stat-num" data-count="2015">0</span>
+            <span class="about__stat-label">год основания</span>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal" data-reveal>О салоне</p>
+          <h2 class="section__title reveal" data-reveal>Не просто стрижка.<br><em>Ваше впечатление.</em></h2>
+          <p class="lead reveal" data-reveal>
+            Наша задача — сделать ощущение комфорта и уверенности реальным для женщин и мужчин. Мы начинаем с разговора: слушаем, смотрим на ваш тип волос и образ жизни, и только потом берём в руки ножницы.
+          </p>
+          <p class="reveal" data-reveal>
+            Салон находится в самом центре Хайденхайма, на Clichystraße. Здесь тихо, светло и нет спешки — у каждого гостя достаточно времени и внимания.
+          </p>
+
+          <ul class="about__list">
+            <li class="reveal" data-reveal>
+              <span class="about__list-icon">01</span>
+              <div><h3>Индивидуальный подход</h3><p>Стрижка и цвет под ваш характер, а не под каталог.</p></div>
+            </li>
+            <li class="reveal" data-reveal>
+              <span class="about__list-icon">02</span>
+              <div><h3>Профессиональный уход</h3><p>L'Oréal и Kérastase — только то, что действительно работает.</p></div>
+            </li>
+            <li class="reveal" data-reveal>
+              <span class="about__list-icon">03</span>
+              <div><h3>Опыт, проверенный временем</h3><p>Более десяти лет в профессии и награды на конкурсах.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ УСЛУГИ ============ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Услуги</p>
+            <h2 class="section__title reveal" data-reveal>Всё для <em>ваших волос</em></h2>
+          </div>
+          <p class="section__intro reveal" data-reveal>От классической стрижки до сложного окрашивания и вечерней укладки — полный спектр услуг в одном салоне.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal" data-reveal>
+            <span class="card__num">01</span>
+            <h3 class="card__title">Стрижка и укладка</h3>
+            <p class="card__text">Женские и мужские стрижки, укладка феном, филировка и стрижка машинкой. Подчёркиваем форму головы и естественное движение волос.</p>
+            <span class="card__price">от 20,50 €</span>
+          </article>
+
+          <article class="card reveal" data-reveal>
+            <span class="card__num">02</span>
+            <h3 class="card__title">Окрашивание</h3>
+            <p class="card__text">Полное окрашивание, тонирование, блики на колпаке и фольга — от деликатного обновления цвета до яркого образа.</p>
+            <span class="card__price">от 35,00 €</span>
+          </article>
+
+          <article class="card reveal" data-reveal>
+            <span class="card__num">03</span>
+            <h3 class="card__title">Завивка и химия</h3>
+            <p class="card__text">Комплексная перманентная завивка с профессиональным уходом — объём и текстура, которые держатся.</p>
+            <span class="card__price">от 90,50 €</span>
+          </article>
+
+          <article class="card reveal" data-reveal>
+            <span class="card__num">04</span>
+            <h3 class="card__title">Уход и лечение</h3>
+            <p class="card__text">Kérastase Hair Discovery: диагностика состояния волос и подбор ухода на дом, чтобы результат жил дольше салона.</p>
+            <span class="card__price">по запросу</span>
+          </article>
+
+          <article class="card reveal" data-reveal>
+            <span class="card__num">05</span>
+            <h3 class="card__title">Вечерние причёски</h3>
+            <p class="card__text">Высокие причёски и укладки для свадьбы, праздника или выпускного — с учётом платья и повода.</p>
+            <span class="card__price">от 40,00 €</span>
+          </article>
+
+          <article class="card reveal" data-reveal>
+            <span class="card__num">06</span>
+            <h3 class="card__title">Брови и ресницы</h3>
+            <p class="card__text">Коррекция формы бровей, окрашивание бровей и ресниц — маленькие детали, которые меняют всё лицо.</p>
+            <span class="card__price">от 7,50 €</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРАЙС ============ -->
+    <section class="section prices" id="preise">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Прайс-лист</p>
+            <h2 class="section__title reveal" data-reveal>Прозрачные <em>цены</em></h2>
+          </div>
+          <p class="section__intro reveal" data-reveal>Все цены указаны в евро. Итоговая стоимость зависит от длины и густоты волос — уточняем до начала работы.</p>
+        </div>
+
+        <div class="price-tabs" role="tablist">
+          <button class="price-tab is-active" role="tab" aria-selected="true" data-tab="women">Дамы</button>
+          <button class="price-tab" role="tab" aria-selected="false" data-tab="men">Мужчины</button>
+        </div>
+
+        <div class="price-panel is-active" data-panel="women">
+          <ul class="price-list">
+            <li><span class="price-list__name">Мытьё, стрижка, укладка феном</span><span class="price-list__dots"></span><span class="price-list__val">ab 46,50 – 55,50 €</span></li>
+            <li><span class="price-list__name">Перманентная завивка, полный комплекс</span><span class="price-list__dots"></span><span class="price-list__val">ab 90,50 €</span></li>
+            <li><span class="price-list__name">Окрашивание</span><span class="price-list__dots"></span><span class="price-list__val">ab 42,00 €</span></li>
+            <li><span class="price-list__name">Блики на колпаке — короткие волосы</span><span class="price-list__dots"></span><span class="price-list__val">35,00 €</span></li>
+            <li><span class="price-list__name">Блики на колпаке — длинные волосы</span><span class="price-list__dots"></span><span class="price-list__val">45,00 €</span></li>
+            <li><span class="price-list__name">Блики на фольге — за штуку (короткие / длинные)</span><span class="price-list__dots"></span><span class="price-list__val">1,70 / 2,10 €</span></li>
+            <li><span class="price-list__name">Тонирование — короткие волосы</span><span class="price-list__dots"></span><span class="price-list__val">ab 35,00 €</span></li>
+            <li><span class="price-list__name">Коррекция бровей</span><span class="price-list__dots"></span><span class="price-list__val">7,50 €</span></li>
+            <li><span class="price-list__name">Окрашивание бровей</span><span class="price-list__dots"></span><span class="price-list__val">9,00 €</span></li>
+            <li><span class="price-list__name">Окрашивание ресниц</span><span class="price-list__dots"></span><span class="price-list__val">10,00 €</span></li>
+            <li><span class="price-list__name">Высокая вечерняя причёска</span><span class="price-list__dots"></span><span class="price-list__val">ab 40,00 €</span></li>
+          </ul>
+        </div>
+
+        <div class="price-panel" data-panel="men">
+          <ul class="price-list">
+            <li><span class="price-list__name">Стрижка (влажная, с укладкой феном)</span><span class="price-list__dots"></span><span class="price-list__val">20,50 €</span></li>
+            <li><span class="price-list__name">Стрижка «стоячих» волос</span><span class="price-list__dots"></span><span class="price-list__val">21,50 €</span></li>
+            <li><span class="price-list__name">Стрижка с мытьём и укладкой феном</span><span class="price-list__dots"></span><span class="price-list__val">27,50 €</span></li>
+            <li><span class="price-list__name">Стрижка бороды</span><span class="price-list__dots"></span><span class="price-list__val">7,50 €</span></li>
+          </ul>
+        </div>
+
+        <p class="price-note reveal" data-reveal>
+          Мы работаем с профессиональной косметикой <strong>L'Oréal</strong>. Подробнее — <a href="#produkte">о продукции</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ КОМАНДА ============ -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal" data-reveal>Команда</p>
+            <h2 class="section__title reveal" data-reveal>Люди, которые <em>слышат вас</em></h2>
+          </div>
+          <p class="section__intro reveal" data-reveal>Небольшая команда мастеров, которые знают своих гостей по имени — и помнят, что вам нравится.</p>
+        </div>
+
+        <div class="team__layout">
+          <div class="team__feature reveal" data-reveal>
+            <img src="assets/img/team-wide.jpg" alt="Команда парикмахерской Friseur Ulrich" loading="lazy">
+            <div class="team__feature-body">
+              <h3>Команда салона Ulrich</h3>
+              <p>Опыт, вкус и честный совет: если идея не навредит вашим волосам — мы её предложим, если навредит — отговорим.</p>
+            </div>
+          </div>
+
+          <div class="team__grid">
+            <figure class="team__item reveal" data-reveal>
+              <img src="assets/img/team-01.jpg" alt="Мастер салона" loading="lazy">
+              <figcaption>Мастер · стрижка и укладка</figcaption>
+            </figure>
+            <figure class="team__item reveal" data-reveal>
+              <img src="assets/img/team-02.jpg" alt="Мастер салона" loading="lazy">
+              <figcaption>Мастер · окрашивание</figcaption>
+            </figure>
+            <figure class="team__item reveal" data-reveal>
+              <img src="assets/img/team-03.jpg" alt="Мастер салона" loading="lazy">
+              <figcaption>Мастер · работа с цветом</figcaption>
+            </figure>
+            <figure class="team__item reveal" data-reveal>
+              <img src="assets/img/team-04.jpg" alt="Мастер салона" loading="lazy">
+              <figcaption>Мастер · уход и завивка</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ НАГРАДЫ ============ -->
+    <section class="section awards" id="auszeichnungen">
+      <div class="container awards__grid">
+        <div class="awards__text">
+          <p class="eyebrow reveal" data-reveal>Награды</p>
+          <h2 class="section__title reveal" data-reveal>Признание,<br><em>которое не спрячешь</em></h2>
+          <p class="lead reveal" data-reveal>
+            Салон неоднократно получал награды на национальных и международных конкурсах. Для нас это не витрина — это подтверждение того, что мы не останавливаемся в развитии.
+          </p>
+          <div class="awards__badges">
+            <div class="awards__badge reveal" data-reveal><span>01</span><p>Награды<br>национальных конкурсов</p></div>
+            <div class="awards__badge reveal" data-reveal><span>02</span><p>Признание<br>международных жюри</p></div>
+            <div class="awards__badge reveal" data-reveal><span>03</span><p>Постоянное<br>обучение мастеров</p></div>
+          </div>
+        </div>
+        <div class="awards__media">
+          <figure class="reveal" data-reveal>
+            <img src="assets/img/award-01.jpg" alt="Награды и работы салона" loading="lazy">
+          </figure>
+          <figure class="reveal" data-reveal>
+            <img src="assets/img/award-02.jpg" alt="Работы салона" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ПРОДУКТЫ ============ -->
+    <section class="section products" id="produkte">
+      <div class="container products__grid">
+        <div class="products__text reveal" data-reveal>
+          <p class="eyebrow">Продукция</p>
+          <h2 class="section__title">Уход, который <em>остаётся с вами</em></h2>
+          <p>
+            Мы работаем с отобранным ассортиментом профессиональных продуктов L'Oréal и Kérastase. Наша цель — сделать ощущение комфорта реальным для женщин и мужчин: открыть Hair Discovery — путешествие к сути волос вместе с L'Oréal.
+          </p>
+          <ul class="products__list">
+            <li>Диагностика состояния волос и кожи головы</li>
+            <li>Профессиональный уход в салоне</li>
+            <li>Подбор домашнего ухода Kérastase</li>
+          </ul>
+          <a class="btn btn--outline" href="https://www.kerastase.de" target="_blank" rel="noopener">www.kerastase.de</a>
+        </div>
+        <figure class="products__img reveal" data-reveal>
+          <img src="assets/img/products.jpg" alt="Профессиональные средства для волос" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ЗАПИСЬ / ЧАСЫ РАБОТЫ ============ -->
+    <section class="section booking" id="termin">
+      <div class="booking__bg" aria-hidden="true">
+        <img src="assets/img/hours-bg.jpg" alt="">
+      </div>
+      <div class="container booking__grid">
+        <div class="booking__text">
+          <p class="eyebrow reveal" data-reveal>Часы работы</p>
+          <h2 class="section__title reveal" data-reveal>Ждём вас <em>в салоне</em></h2>
+          <p class="reveal" data-reveal>Лучше всего — по телефону: мы подберём удобное время и нужного мастера. Запись в день визита возможна, если есть свободное окно.</p>
+
+          <ul class="hours reveal" data-reveal>
+            <li><span>Понедельник</span><span class="hours__closed">закрыто</span></li>
+            <li><span>Вторник – Пятница</span><span>8:00 – 18:00</span></li>
+            <li><span>Суббота (зимнее время)</span><span>8:00 – 12:30</span></li>
+            <li><span>Суббота (летнее время)</span><span>7:30 – 12:00</span></li>
+            <li><span>Воскресенье</span><span class="hours__closed">закрыто</span></li>
+          </ul>
+
+          <div class="booking__actions reveal" data-reveal>
+            <a href="tel:+49732143947" class="btn btn--accent">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1Z"/></svg>
+              0 7321 43947
+            </a>
+            <a href="mailto:info@friseur-ulrich.de" class="btn btn--outline btn--light">Написать на e-mail</a>
+          </div>
+        </div>
+
+        <form class="form reveal" data-reveal id="bookingForm" novalidate>
+          <h3 class="form__title">Запрос на запись</h3>
+          <p class="form__hint">Оставьте контакты — мы позвоним и подтвердим время.</p>
+
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Имя</span>
+              <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span class="field__label">Телефон</span>
+              <input type="tel" name="phone" placeholder="+49 …" autocomplete="tel" required>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field__label">E-mail <span class="field__opt">(необязательно)</span></span>
+            <input type="email" name="email" placeholder="name@mail.de" autocomplete="email">
+          </label>
+
+          <label class="field">
+            <span class="field__label">Услуга</span>
+            <select name="service">
+              <option>Стрижка и укладка</option>
+              <option>Окрашивание</option>
+              <option>Завивка / химия</option>
+              <option>Уход и лечение</option>
+              <option>Вечерняя причёска</option>
+              <option>Брови и ресницы</option>
+            </select>
+          </label>
+
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Желаемая дата</span>
+              <input type="date" name="date">
+            </label>
+            <label class="field">
+              <span class="field__label">Желаемое время</span>
+              <input type="time" name="time" min="08:00" max="18:00" step="900">
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Комментарий</span>
+            <textarea name="message" rows="3" placeholder="Удобное время, пожелания…"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--full">Отправить запрос</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ОТЗЫВЫ ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <p class="eyebrow eyebrow--center reveal" data-reveal>Отзывы</p>
+        <h2 class="section__title section__title--center reveal" data-reveal>Слушаем не только волосы</h2>
+
+        <div class="reviews__grid">
+          <figure class="review reveal" data-reveal>
+            <span class="review__mark">“</span>
+            <blockquote>Приехала с идеей, которая мне самой казалась рискованной. Мастер честно объяснила, что получится, и результат превзошёл всё.</blockquote>
+            <figcaption><span class="review__name">Анна К.</span><span class="review__meta">краситель · блики</span></figcaption>
+          </figure>
+          <figure class="review reveal" data-reveal>
+            <span class="review__mark">“</span>
+            <blockquote>Хожу сюда несколько лет. Никогда не торопят, всегда послушают — и стрижка держится долго, долго красиво отрастает.</blockquote>
+            <figcaption><span class="review__name">Михаэль В.</span><span class="review__meta">стрижка · укладка</span></figcaption>
+          </figure>
+          <figure class="review reveal" data-reveal>
+            <span class="review__mark">“</span>
+            <blockquote>Уютный салон, приятная атмосфера и настоящие профессионалы. Записалась на свадебную причёску — получила больше, чем ждала.</blockquote>
+            <figcaption><span class="review__name">Юлия Р.</span><span class="review__meta">вечерняя причёска</span></figcaption>
+          </figure>
+        </div>
+
+        <!-- Отзывы, одобренные в админке, подгружаются сюда -->
+        <div class="reviews__grid reviews__grid--live" id="reviewsLive" hidden></div>
+
+        <form class="form form--review reveal" data-reveal id="reviewForm" novalidate>
+          <h3 class="form__title">Оставить отзыв</h3>
+          <p class="form__hint">Отзыв появится на сайте после проверки — это занимает немного времени.</p>
+
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Имя</span>
+              <input type="text" name="name" placeholder="Как вас зовут" autocomplete="name" required>
+            </label>
+            <label class="field">
+              <span class="field__label">Услуга</span>
+              <select name="service">
+                <option>Стрижка и укладка</option>
+                <option>Окрашивание</option>
+                <option>Завивка / химия</option>
+                <option>Уход и лечение</option>
+                <option>Вечерняя причёска</option>
+                <option>Брови и ресницы</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="rating" id="reviewRating">
+            <legend class="field__label">Оценка</legend>
+            <div class="rating__stars" role="radiogroup" aria-label="Оценка от 1 до 5">
+              <input type="radio" name="rating" id="star5" value="5" checked><label for="star5" title="Отлично">★</label>
+              <input type="radio" name="rating" id="star4" value="4"><label for="star4" title="Хорошо">★</label>
+              <input type="radio" name="rating" id="star3" value="3"><label for="star3" title="Нормально">★</label>
+              <input type="radio" name="rating" id="star2" value="2"><label for="star2" title="Так себе">★</label>
+              <input type="radio" name="rating" id="star1" value="1"><label for="star1" title="Плохо">★</label>
+            </div>
+          </fieldset>
+
+          <label class="field">
+            <span class="field__label">Отзыв</span>
+            <textarea name="text" rows="4" placeholder="Что вам понравилось, что можно улучшить…" required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--full">Отправить отзыв</button>
+          <p class="form__status" id="reviewStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ КОНТАКТЫ ============ -->
+    <section class="section contact" id="kontakt">
+      <div class="container contact__grid">
+        <div class="contact__card reveal" data-reveal>
+          <p class="eyebrow">Контакты</p>
+          <h2 class="section__title">Как нас <em>найти</em></h2>
+
+          <address class="contact__address">
+            <span class="contact__label">Адрес</span>
+            <p>Clichystraße 35<br>89518 Heidenheim</p>
+          </address>
+
+          <div class="contact__row">
+            <div>
+              <span class="contact__label">Телефон</span>
+              <p><a href="tel:+49732143947">0 7321 43947</a></p>
+            </div>
+            <div>
+              <span class="contact__label">E-mail</span>
+              <p><a href="mailto:info@friseur-ulrich.de">info@friseur-ulrich.de</a></p>
+            </div>
+          </div>
+
+          <a class="btn btn--primary" href="https://maps.google.com/?q=Clichystra%C3%9Fe+35,+89518+Heidenheim" target="_blank" rel="noopener">
+            Открыть в картах
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+
+        <figure class="contact__img reveal" data-reveal>
+          <img src="assets/img/contact.jpg" alt="Расположение салона Friseur Ulrich" loading="lazy">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ ФУТЕР ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="brand">
+          <span class="brand__mark">U</span>
+          <span class="brand__text">
+            <span class="brand__name">Friseur Ulrich</span>
+            <span class="brand__sub">Heidenheim</span>
+          </span>
+        </a>
+        <p>Парикмахерский салон в центре Хайденхайма. Стрижка, цвет, уход — с 2015 года.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Меню</h4>
+        <a href="#ueber">О салоне</a>
+        <a href="#services">Услуги</a>
+        <a href="#preise">Прайс</a>
+        <a href="#team">Команда</a>
+        <a href="#auszeichnungen">Награды</a>
+        <a href="#reviews">Отзывы</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <a href="tel:+49732143947">0 7321 43947</a>
+        <a href="mailto:info@friseur-ulrich.de">info@friseur-ulrich.de</a>
+        <p>Clichystraße 35<br>89518 Heidenheim</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Часы работы</h4>
+        <p>Вт–Пт: 8:00 – 18:00<br>Сб: по сезону<br><span class="footer__muted">Пн и Вс — закрыто</span></p>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Friseur Ulrich · Heidenheim</p>
+      <p class="footer__legal">Правовая информация · Конфиденциальность</p>
+    </div>
+  </footer>
+
+  <!-- Кнопка наверх -->
+  <button class="to-top" id="toTop" aria-label="Наверх">
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

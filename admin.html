@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Кабинет · Friseur Ulrich</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="adm">
+
+  <!-- ================= ВХОД ================= -->
+  <section class="adm-login" id="loginView" hidden>
+    <form class="adm-login__card" id="loginForm" autocomplete="on">
+      <a href="/" class="adm-brand">
+        <span class="adm-brand__mark">U</span>
+        <span>
+          <span class="adm-brand__name">Friseur Ulrich</span>
+          <span class="adm-brand__sub">Личный кабинет</span>
+        </span>
+      </a>
+
+      <label class="adm-field">
+        <span>Логин</span>
+        <input type="text" name="user" id="loginUser" autocomplete="username" required>
+      </label>
+
+      <label class="adm-field">
+        <span>Пароль</span>
+        <input type="password" name="pass" id="loginPass" autocomplete="current-password" required>
+      </label>
+
+      <p class="adm-alert" id="loginStatus" role="status" aria-live="polite"></p>
+
+      <button type="submit" class="btn btn--primary adm-submit" id="loginBtn">Войти</button>
+
+      <p class="adm-hint">Вход только для сотрудников салона.<br><a href="/">← Вернуться на сайт</a></p>
+    </form>
+  </section>
+
+  <!-- ================= КАБИНЕТ ================= -->
+  <div class="adm-app" id="appView" hidden>
+
+    <header class="adm-top">
+      <a href="/" class="adm-brand adm-brand--sm">
+        <span class="adm-brand__mark">U</span>
+        <span>
+          <span class="adm-brand__name">Friseur Ulrich</span>
+          <span class="adm-brand__sub">Кабинет</span>
+        </span>
+      </a>
+
+      <nav class="adm-tabs" aria-label="Разделы кабинета">
+        <button class="adm-tab is-active" data-tab="bookings" type="button">Заявки <span class="adm-tab__count"
+            id="countBookings">0</span></button>
+        <button class="adm-tab" data-tab="reviews" type="button">Отзывы <span
+            class="adm-tab__count adm-tab__count--warn" id="countReviews">0</span></button>
+        <button class="adm-tab" data-tab="settings" type="button">Настройки</button>
+      </nav>
+
+      <div class="adm-top__actions">
+        <button class="adm-icon-btn" id="refreshBtn" type="button" title="Обновить данные"
+          aria-label="Обновить данные">⟳</button>
+        <button class="btn btn--outline adm-logout" id="logoutBtn" type="button">Выйти</button>
+      </div>
+    </header>
+
+    <main class="adm-main">
+
+      <!-- Статистика -->
+      <section class="adm-stats" aria-label="Сводка">
+        <div class="adm-stat">
+          <span class="adm-stat__label">Всего заявок</span>
+          <strong class="adm-stat__value" id="statBookings">—</strong>
+        </div>
+        <div class="adm-stat">
+          <span class="adm-stat__label">Новых</span>
+          <strong class="adm-stat__value adm-stat__value--brass" id="statNew">—</strong>
+        </div>
+        <div class="adm-stat">
+          <span class="adm-stat__label">Отзывов на проверке</span>
+          <strong class="adm-stat__value" id="statPending">—</strong>
+        </div>
+        <div class="adm-stat">
+          <span class="adm-stat__label">Средний рейтинг</span>
+          <strong class="adm-stat__value" id="statRating">—</strong>
+        </div>
+      </section>
+
+      <p class="adm-alert adm-alert--block" id="mailNotice" hidden></p>
+
+      <!-- ============ ЗАЯВКИ ============ -->
+      <section class="adm-panel" data-panel="bookings">
+        <div class="adm-panel__head">
+          <h2 class="adm-panel__title">Заявки на запись</h2>
+          <div class="adm-panel__tools">
+            <select class="adm-select" id="bookingFilter" aria-label="Фильтр по статусу">
+              <option value="all">Все статусы</option>
+              <option value="new">Новые</option>
+              <option value="confirmed">Подтверждённые</option>
+              <option value="done">Выполненные</option>
+              <option value="cancelled">Отменённые</option>
+            </select>
+            <input class="adm-input" id="bookingSearch" type="search" placeholder="Поиск: имя, телефон…"
+              aria-label="Поиск по заявкам">
+            <a class="btn btn--accent adm-small-btn" href="/api/admin/bookings.csv" download>CSV</a>
+          </div>
+        </div>
+
+        <div class="adm-list" id="bookingsList"></div>
+      </section>
+
+      <!-- ============ ОТЗЫВЫ ============ -->
+      <section class="adm-panel" data-panel="reviews" hidden>
+        <div class="adm-panel__head">
+          <h2 class="adm-panel__title">Отзывы</h2>
+          <div class="adm-panel__tools">
+            <select class="adm-select" id="reviewFilter" aria-label="Фильтр по статусу">
+              <option value="all">Все</option>
+              <option value="pending">На проверке</option>
+              <option value="approved">Опубликованные</option>
+              <option value="rejected">Отклонённые</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="adm-list" id="reviewsList"></div>
+      </section>
+
+      <!-- ============ НАСТРОЙКИ ============ -->
+      <section class="adm-panel" data-panel="settings" hidden>
+        <div class="adm-panel__head">
+          <h2 class="adm-panel__title">Настройки и экспорт</h2>
+        </div>
+
+        <div class="adm-settings">
+          <article class="adm-card">
+            <h3>Почта для уведомлений</h3>
+            <p id="mailState">Проверяем…</p>
+            <p class="adm-muted">Все заявки и отзывы сохраняются в кабинете. Чтобы они ещё и приходили на e-mail,
+              укажите SMTP-данные в переменных окружения хостинга (см. DEPLOY.md).</p>
+          </article>
+
+          <article class="adm-card">
+            <h3>Экспорт заявок</h3>
+            <p class="adm-muted">Файл CSV открывается в Excel и Google Таблицах (кириллица в порядке).</p>
+            <a class="btn btn--primary adm-small-btn" href="/api/admin/bookings.csv" download>Заявки (CSV)</a>
+            <a class="btn btn--ghost adm-small-btn" href="/api/admin/reviews.csv" download>Отзывы (CSV)</a>
+          </article>
+
+          <article class="adm-card">
+            <h3>Проверка сервера</h3>
+            <p class="adm-muted">Здоровье сервиса: <a href="/healthz" target="_blank" rel="noopener">/healthz</a></p>
+            <p class="adm-muted" id="uptimeInfo"></p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="adm-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

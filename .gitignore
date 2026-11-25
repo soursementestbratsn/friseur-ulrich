@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+# site data (bookings, reviews) - never publish
+data/
+# local secrets
+.env
+.env.*
+# tests and screenshots
+.qa/
+# service files
+*.log
+.DS_Store
+Thumbs.db
