@@ -21,7 +21,7 @@ npm start
 ```
 
 Откройте **http://localhost:8099**
-Кабинет: **http://localhost:8099/admin** — логин `admin`, пароль `admin123`.
+Кабинет: **http://localhost:8099/admin** — логин `lorcyt`, пароль `bagdu9-qeqnyq-kazbiX`.
 
 Порт можно сменить: `$env:PORT=3000; npm start`
 
@@ -50,8 +50,8 @@ npm start
 3. **Environment Variables** (добавьте в панели `Environment`):
    | Переменная | Значение |
    |---|---|
-   | `ADMIN_USER` | ваш логин в кабинет (например `ulrich`) |
-   | `ADMIN_PASS` | **надёжный пароль** |
+   | `ADMIN_USER` | `lorcyt` |
+   | `ADMIN_PASS` | `bagdu9-qeqnyq-kazbiX` |
    | `SESSION_SECRET` | любая длинная случайная строка |
    | `NODE_VERSION` | `20` |
    - Почта (необязательно, см. раздел 4): `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `MAIL_TO`
@@ -88,7 +88,9 @@ npx localtunnel --port 8099
 - **Отзывы** — новые приходят как `pending`; после «Одобрить» появляются на сайте
 - **CSV** — выгрузка заявок и отзывов в Excel
 - **Пароль** меняется только через переменную `ADMIN_PASS` на хостинге (и перезапуск).
-  Никогда не оставляйте `admin123` на публичном адресе.
+  Не используйте простые пароли на публичном адресе.
+- Текущие данные для входа: логин `lorcyt`, пароль `bagdu9-qeqnyq-kazbiX`
+  (заданы и в `render.yaml`, и по умолчанию в `server.js`).
 
 ---
 

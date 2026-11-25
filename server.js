@@ -22,8 +22,8 @@ const PORT = Number(process.env.PORT) || 8099;
 const ROOT = __dirname;
 
 // ---------- доступ в кабинет ----------
-const ADMIN_USER = process.env.ADMIN_USER || 'admin';
-const ADMIN_PASS = process.env.ADMIN_PASS || 'admin123';
+const ADMIN_USER = process.env.ADMIN_USER || 'lorcyt';
+const ADMIN_PASS = process.env.ADMIN_PASS || 'bagdu9-qeqnyq-kazbiX';
 // Секрет для подписи cookie. Если не задан — генерируется при старте
 // (после перезапуска сервера нужно войти заново).
 const SECRET = process.env.SESSION_SECRET || crypto.randomBytes(24).toString('hex');

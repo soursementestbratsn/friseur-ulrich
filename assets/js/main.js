@@ -141,12 +141,16 @@
     const isYear = target > 1900 && target < 2100;
     const duration = 1500;
     const start = performance.now();
+    // Год считаем от текущего года назад до 2015 — без проскока через 0.
+    const from = isYear ? 2000 : 0;
+
+    el.textContent = from;
 
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
-      const value = Math.round(target * eased);
-      el.textContent = isYear ? value : value;
+      const value = Math.round(from + (target - from) * eased);
+      el.textContent = value;
       if (p < 1) requestAnimationFrame(step);
       else el.textContent = target;
     };
